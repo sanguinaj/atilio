@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan de Estudios - Tecnicatura Superior en Soporte de Infraestructura de TI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+
+/* Modern Educational Platform Styling - Enhanced Version */
+:root {
+    --primary-color: #1a365d;
+    --secondary-color: #2b6cb0;
+    --accent-color: #e53e3e;
+    --light-color: #f7fafc;
+    --dark-color: #2d3748;
+    --success-color: #38a169;
+    --warning-color: #dd6b20;
+    --info-color: #3182ce;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --card-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --transition: all 0.3s ease;
+    --border-radius: 8px;
+    --font-main: 'Roboto', 'Segoe UI', sans-serif;
+    --font-heading: 'Montserrat', 'Arial', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    line-height: 1.6;
+    color: #333;
+    background-color: #f0f4f8;
+    overflow-x: hidden;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h2:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: var(--secondary-color);
+    border-radius: 2px;
+}
+
+h3 {
+    font-size: 1.75rem;
+    color: white;
+    margin-bottom: 0;
+}
+
+h4 {
+    font-size: 1.25rem;
+    color: var(--dark-color);
+    margin-top: 1rem;
+    margin-bottom: 0.75rem;
+}
+
+h5 {
+    font-size: 1.1rem;
+}
+
+p {
+    margin-bottom: 0.75rem;
+}
+
+/* Layout */
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-color) 100%);
+    color: white;
+    padding: 1.5rem 0;
+    box-shadow: var(--shadow);
+    position: relative;
+}
+
+header:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.1;
+    z-index: 0;
+}
+
+.header-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.logo h1 {
+    color: white;
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.logo h2 {
+    color: var(--light-color);
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding-bottom: 0;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.logo h2:after {
+    display: none;
+}
+
+/* Main Content */
+main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    position: relative;
+    overflow: hidden;
+}
+
+.intro:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color), var(--accent-color));
+}
+
+.intro h1 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.intro p {
+    font-size: 1.2rem;
+    color: var(--dark-color);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Tabs for Years */
+.year-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    gap: 0.5rem;
+}
+
+.year-tab {
+    padding: 0.75rem 1.5rem;
+    background-color: #e2e8f0;
+    color: var(--dark-color);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.year-tab.active {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.year-tab:hover:not(.active) {
+    background-color: #cbd5e0;
+}
+
+/* Curriculum Section */
+.curriculum {
+    margin-bottom: 2rem;
+}
+
+.year-container {
+    display: none;
+    margin-bottom: 2rem;
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    overflow: hidden;
+}
+
+.year-container.active {
+    display: block;
+}
+
+.year-header {
+    padding: 1.25rem;
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.year-header .year-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.year-header .year-stats {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.semester-container {
+    padding: 1.25rem;
+}
+
+.semester-tabs {
+    display: flex;
+    border-bottom: 2px solid #e2e8f0;
+    margin-bottom: 1.5rem;
+}
+
+.semester-tab {
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    font-weight: 500;
+    color: #718096;
+    position: relative;
+    transition: var(--transition);
+}
+
+.semester-tab.active {
+    color: var(--secondary-color);
+}
+
+.semester-tab.active:after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--secondary-color);
+}
+
+.semester-content {
+    display: none;
+}
+
+.semester-content.active {
+    display: block;
+}
+
+.course-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.25rem;
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+
+.course-card {
+    background-color: #fff;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    padding: 1.25rem;
+    transition: var(--transition);
+    border-top: 4px solid var(--secondary-color);
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--card-shadow);
+}
+
+.course-card h5 {
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.course-type {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    margin-bottom: 0.75rem;
+}
+
+.prerequisites {
+    background-color: #f8f9fa;
+    padding: 0.75rem;
+    border-radius: var(--border-radius);
+    font-size: 0.9rem;
+    margin-top: auto;
+}
+
+.prerequisites p {
+    margin-bottom: 0;
+}
+
+/* Color coding by course type */
+.course-card[data-type="annual"] {
+    border-top-color: var(--accent-color);
+}
+
+.course-card[data-type="first-semester"] {
+    border-top-color: var(--success-color);
+}
+
+.course-card[data-type="second-semester"] {
+    border-top-color: var(--warning-color);
+}
+
+/* Curriculum Map */
+.curriculum-map {
+    background-color: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    margin-bottom: 2rem;
+}
+
+.map-container {
+    background-color: var(--light-color);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    margin-top: 1.5rem;
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+    color: #777;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1.5rem 0;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.footer-content p {
+    margin-bottom: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .course-list {
+        grid-template-columns: 1fr;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.75rem;
+    }
+    
+    h3 {
+        font-size: 1.5rem;
+    }
+    
+    .header-content {
+        flex-direction: column;
+    }
+    
+    .year-tabs {
+        flex-wrap: wrap;
+    }
+    
+    .semester-tabs {
+        overflow-x: auto;
+    }
+}
+
+/* Print Styles */
+@media print {
+    body {
+        background-color: white;
+    }
+    
+    .year-container, .curriculum-map, .intro {
+        box-shadow: none;
+        margin-bottom: 1rem;
+        page-break-inside: avoid;
+    }
+    
+    .course-card {
+        box-shadow: none;
+        page-break-inside: avoid;
+    }
+    
+    header, footer {
+        background-color: white;
+        color: black;
+    }
+    
+    .logo h1, .logo h2 {
+        color: black;
+    }
+    
+    .year-header {
+        background-color: #f0f0f0;
+        color: black;
+    }
+    
+    .year-tab, .semester-tab {
+        border: 1px solid #ddd;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+
+    <main>
+        <section class="intro">
+            <h1>Tecnicatura Superior en Soporte de Infraestructura de TI</h1>
+            <p>Plan de estudios y correlatividades</p>
+        </section>
+
+        <section class="curriculum">
+            <h2>Plan de Estudios</h2>
+            
+            <div class="year-container">
+                <h3>Segundo Año</h3>
+                <div class="semester-container">
+                    <h4>Materias Anuales</h4>
+                    <ul class="course-list">
+                        <li class="course-card">
+                            <h5>Prácticas Profesionalizantes II</h5>
+                            <p class="course-type">Anual</p>
+                            <div class="prerequisites">
+                                <p>Correlatividades: Práctica Profesionalizante I</p>
+                            </div>
+                        </li>
+                        <li class="course-card">
+                            <h5>Matemática II</h5>
+                            <p class="course-type">Anual</p>
+                            <div class="prerequisites">
+                                <p>Correlatividades: Matemática I</p>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <h4>Primer Cuatrimestre</h4>
+                    <ul class="course-list">
+                        <li class="course-card">
+                            <h5>Inglés Técnico II</h5>
+                            <p class="course-type">1° Cuatrimestre</p>
+                            <div class="prerequisites">
+                                <p>Correlatividades: Inglés Técnico I</p>
+                            </div>
+                        </li>
+                        <li class="course-card">
+                            <h5>Lenguaje de Programación</h5>
+                            <p class="course-type">1° Cuatrimestre</p>
+                            <div class="prerequisites">
+                                <p>Correlatividades: Diagramación y Algoritmia</p>
+                            </div>
+                        </li>
+                        <li class="course-card">
+                            <h5>Sistemas Operativos II</h5>
+                            <p class="course-type">1° Cuatrimestre</p>
+                            <div class="prerequisites">
+                                <p>Correlatividades: Sistemas Operativos I</p>
+                            </div>
+                        </li>
+                        <li class="course-card">
+                            <h5>Instalación y Configuración de Redes I</h5>
+                            <p class="course-type">1° Cuatrimestre</p>
+                            <div class="prerequisites">
+                                <p>Correlatividades: Arquitectura y Estructura de las Computadoras</p>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <h4>Segundo Cuatrimestre</h4>
+                    <ul class="course-list">
+                        <li class="course-card">
+                            <h5>Instalación y Configuración de Redes II</h5>
+                            <p class="course-type">2° Cuatrimestre</p>
+                            <div class="prerequisites">
+                                <p>Correlatividades: Instalación y Configuración de Redes I</p>
+                            </div>
+                        </li>
+                        <li class="course-card">
+                            <h5>Base de datos I</h5>
+                            <p class="course-type">2° Cuatrimestre</p>
+                            <div class="prerequisites">
+                                <p>Correlatividades: Sin correlatividad</p>
+                            </div>
+                        </li>
+                        <li class="course-card">
+                            <h5>Administración y Teoría de las Organizaciones</h5>
+                            <p class="course-type">2° Cuatrimestre</p>
+                            <div class="prerequisites">
+                                <p>Correlatividades: Sin correlatividad</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="year-container">
+                <h3>Tercer Año</h3>
+                <div class="semester-container">
+                    <h4>Materias Anuales</h4>
+                    <ul class="course-list">
+                        <li class="course-card">
+                            <h5>Práctica Profesionalizante III</h5>
+                            <p class="course-type">Anual</p>
+                            <div class="prerequisites">
+                                <p>Correlatividades: Práctica Profesionalizante II</p>
+                            </div>
+                        </li>
+                        <li class="course-card">
+                            <h5>Seguridad de Proyectos Informático y Redes</h5>
+                            <p class="course-type">Anual</p>
+                            <div class="prerequisites">
+                                <p>Correlatividades: Instalación y configuración de redes II</p>
+                            </div>
+                        </li>
+                        <li class="course-card">
+                            <h5>Análisis de la Realidad Sociocultural de Formosa</h5>
+                            <p class="course-type">Anual</p>
+                            <div class="prerequisites">
+                                <p>Correlatividades: Sin correlatividad</p>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <h4>Primer Cuatrimestre</h4>
+                    <ul class="course-list">
+                        <li class="course-card">
+                            <h5>Administración y Auditoría de Proyectos Informáticos y Redes</h5>
+                            <p class="course-type">1° Cuatrimestre</p>
+                            <div class="prerequisites">
+                                <p>Correlatividades: Instalación y Configuración de Redes II</p>
+                            </div>
+                        </li>
+                        <li class="course-card">
+                            <h5>Base de Datos II</h5>
+                            <p class="course-type">1° Cuatrimestre</p>
+                            <div class="prerequisites">
+                                <p>Correlatividades: Base de Datos I</p>
+                            </div>
+                        </li>
+                        <li class="course-card">
+                            <h5>Espacio de Definición Institucional I</h5>
+                            <p class="course-type">1° Cuatrimestre</p>
+                            <div class="prerequisites">
+                                <p>Correlatividades: Sin correlatividad</p>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <h4>Segundo Cuatrimestre</h4>
+                    <ul class="course-list">
+                        <li class="course-card">
+                            <h5>Ética y Ejercicio Profesional</h5>
+                            <p class="course-type">2° Cuatrimestre</p>
+                            <div class="prerequisites">
+                                <p>Correlatividades: Sin correlatividad</p>
+                            </div>
+                        </li>
+                        <li class="course-card">
+                            <h5>Estadística Aplicada</h5>
+                            <p class="course-type">2° Cuatrimestre</p>
+                            <div class="prerequisites">
+                                <p>Correlatividades: Matemática II</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+     
+    </main>
+
+ 
+
+    <script>
+        // JavaScript to handle tab functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add data-type attributes to course cards
+            document.querySelectorAll('.semester-container').forEach(container => {
+                const annualCourses = container.querySelector('h4:nth-of-type(1) + .course-list');
+                const firstSemesterCourses = container.querySelector('h4:nth-of-type(2) + .course-list');
+                const secondSemesterCourses = container.querySelector('h4:nth-of-type(3) + .course-list');
+                
+                if (annualCourses) {
+                    annualCourses.querySelectorAll('.course-card').forEach(card => {
+                        card.setAttribute('data-type', 'annual');
+                    });
+                }
+                
+                if (firstSemesterCourses) {
+                    firstSemesterCourses.querySelectorAll('.course-card').forEach(card => {
+                        card.setAttribute('data-type', 'first-semester');
+                    });
+                }
+                
+                if (secondSemesterCourses) {
+                    secondSemesterCourses.querySelectorAll('.course-card').forEach(card => {
+                        card.setAttribute('data-type', 'second-semester');
+                    });
+                }
+            });
+            
+            // Create year tabs
+            const yearContainers = document.querySelectorAll('.year-container');
+            const tabsContainer = document.createElement('div');
+            tabsContainer.className = 'year-tabs';
+            
+            yearContainers.forEach((container, index) => {
+                const yearName = container.querySelector('h3').textContent;
+                const tab = document.createElement('div');
+                tab.className = 'year-tab';
+                tab.textContent = yearName;
+                tab.addEventListener('click', () => {
+                    document.querySelectorAll('.year-tab').forEach(t => t.classList.remove('active'));
+                    document.querySelectorAll('.year-container').forEach(c => c.classList.remove('active'));
+                    tab.classList.add('active');
+                    container.classList.add('active');
+                });
+                
+                if (index === 0) {
+                    tab.classList.add('active');
+                    container.classList.add('active');
+                }
+                
+                tabsContainer.appendChild(tab);
+            });
+            
+            const curriculumSection = document.querySelector('.curriculum');
+            curriculumSection.insertBefore(tabsContainer, curriculumSection.firstChild);
+            
+            // Restructure each year container
+            yearContainers.forEach(container => {
+                const yearTitle = container.querySelector('h3').textContent;
+                const semesterContainer = container.querySelector('.semester-container');
+                
+                // Create year header
+                const yearHeader = document.createElement('div');
+                yearHeader.className = 'year-header';
+                
+                const yearInfo = document.createElement('div');
+                yearInfo.className = 'year-info';
+                
+                const h3 = document.createElement('h3');
+                h3.textContent = yearTitle;
+                yearInfo.appendChild(h3);
+                
+                yearHeader.appendChild(yearInfo);
+                
+                // Count courses
+                const courseCount = semesterContainer.querySelectorAll('.course-card').length;
+                const yearStats = document.createElement('div');
+                yearStats.className = 'year-stats';
+                yearStats.textContent = `${courseCount} materias`;
+                yearHeader.appendChild(yearStats);
+                
+                // Replace the original h3
+                container.replaceChild(yearHeader, container.querySelector('h3'));
+                
+                // Create semester tabs
+                const semesterTabs = document.createElement('div');
+                semesterTabs.className = 'semester-tabs';
+                
+                const annualTab = document.createElement('div');
+                annualTab.className = 'semester-tab active';
+                annualTab.textContent = 'Materias Anuales';
+                semesterTabs.appendChild(annualTab);
+                
+                const firstSemesterTab = document.createElement('div');
+                firstSemesterTab.className = 'semester-tab';
+                firstSemesterTab.textContent = 'Primer Cuatrimestre';
+                semesterTabs.appendChild(firstSemesterTab);
+                
+                const secondSemesterTab = document.createElement('div');
+                secondSemesterTab.className = 'semester-tab';
+                secondSemesterTab.textContent = 'Segundo Cuatrimestre';
+                semesterTabs.appendChild(secondSemesterTab);
+                
+                // Get semester content
+                const annualContent = document.createElement('div');
+                annualContent.className = 'semester-content active';
+                const firstSemesterContent = document.createElement('div');
+                firstSemesterContent.className = 'semester-content';
+                const secondSemesterContent = document.createElement('div');
+                secondSemesterContent.className = 'semester-content';
+                
+                // Move existing content to new structure
+                const headings = semesterContainer.querySelectorAll('h4');
+                const lists = semesterContainer.querySelectorAll('.course-list');
+                
+                if (headings.length >= 1 && lists.length >= 1) {
+                    annualContent.appendChild(lists[0].cloneNode(true));
+                }
+                
+                if (headings.length >= 2 && lists.length >= 2) {
+                    firstSemesterContent.appendChild(lists[1].cloneNode(true));
+                }
+                
+                if (headings.length >= 3 && lists.length >= 3) {
+                    secondSemesterContent.appendChild(lists[2].cloneNode(true));
+                }
+                
+                // Clear original content
+                semesterContainer.innerHTML = '';
+                
+                // Add new structure
+                semesterContainer.appendChild(semesterTabs);
+                semesterContainer.appendChild(annualContent);
+                semesterContainer.appendChild(firstSemesterContent);
+                semesterContainer.appendChild(secondSemesterContent);
+                
+                // Add tab functionality
+                annualTab.addEventListener('click', () => {
+                    semesterTabs.querySelectorAll('.semester-tab').forEach(tab => tab.classList.remove('active'));
+                    semesterContainer.querySelectorAll('.semester-content').forEach(content => content.classList.remove('active'));
+                    annualTab.classList.add('active');
+                    annualContent.classList.add('active');
+                });
+                
+                firstSemesterTab.addEventListener('click', () => {
+                    semesterTabs.querySelectorAll('.semester-tab').forEach(tab => tab.classList.remove('active'));
+                    semesterContainer.querySelectorAll('.semester-content').forEach(content => content.classList.remove('active'));
+                    firstSemesterTab.classList.add('active');
+                    firstSemesterContent.classList.add('active');
+                });
+                
+                secondSemesterTab.addEventListener('click', () => {
+                    semesterTabs.querySelectorAll('.semester-tab').forEach(tab => tab.classList.remove('active'));
+                    semesterContainer.querySelectorAll('.semester-content').forEach(content => content.classList.remove('active'));
+                    secondSemesterTab.classList.add('active');
+                    secondSemesterContent.classList.add('active');
+                });
+            });
+        });
+        </script>
+</body>
+</html>
